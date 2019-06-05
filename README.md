@@ -55,25 +55,20 @@ For more information open [fastlane match git repo](https://docs.fastlane.tools/
 ### Trouble shooting
 
 1. Clone certificates repo taking like...forever
-
-Try to add `--verbose` when run `match` command to see exact the proplem
+- Try to add `--verbose` when run `match` command to see exact the proplem
 
 2. Error when clone certificates repo
-
-First, follow this [Link](https://github.com/settings/keys) to check if you did add your ssh key to your github account.
-Second, check if you add github to your `known_host`. If not, you can use following script to add it to list known host
+- First, follow this [Link](https://github.com/settings/keys) to check if you did add your ssh key to your github account.
+- Second, check if you add github to your `known_host`. If not, you can use following script to add it to list known host
 ```
 ssh-keyscan github.com >> ~/.ssh/known_hosts
 ```
 
 3. Can not build project on a device
-
-Please check if you select the right profile for your target.
+- Please check if you select the right profile for your target.
 
 4. I did select right profile but i can't build it either
-
-Check if profile contain that device uuid
+- Check if profile contain that device uuid
 
 5. I built it successfully, but app crash right after app launch
-
-Clean project and build it again. Maybe your cached framework still signed with old certificate (which had been revoke)
+- Clean project and build it again. Maybe your cached framework still signed with old certificate (which had been revoke)
